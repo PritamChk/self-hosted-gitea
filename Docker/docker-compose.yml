@@ -1,0 +1,37 @@
+# version: '3.8'
+services:
+  gitea_app:
+    image: pritamchk98/gitea:v1.23.5
+    container_name: gitea-appC1
+    ports:
+      - "3000:3000"
+    env_file:
+      - gitea.env
+    volumes:
+      - "gitea_app_vol:/gitea"
+    hostname: gitea-app
+    networks:
+      - gitea-net
+    restart: on-failure:3
+    depends_on:
+      - db_service
+  db_service:
+    image: pritamchk98/postgres:v15.10
+    container_name: gitea_pgdbC1
+    hostname: giteapgdbserver
+    env_file:
+      - pgdb.env
+    ports:
+      - "5300:5300"
+    volumes:
+      - "gitea_db_vol:/postgres/Database"
+    networks:
+      - gitea-net
+
+networks:
+  gitea-net:
+    driver: bridge
+
+volumes:
+  gitea_db_vol:
+  gitea_app_vol:
