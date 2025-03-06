@@ -15,13 +15,14 @@ ENV VERSION=${VERSION} \
     DBHOST=localhost \
     DBPORT=5432 \
     DBNAME=giteadb \
-    DBUSER=giteadb \
-    DBPASSWD=abcd1234 
+    DBUSER=gitea \
+    DBPASSWD=gitea 
 
 
 RUN apk update && \
-    apk add --no-cache shadow git envsubst postgresql-client
+    apk add --no-cache shadow git envsubst postgresql-client bash
 
+# SHELL [ "bash" ]
 EXPOSE ${GITEA_PORT}
 
 # create user for gitea
