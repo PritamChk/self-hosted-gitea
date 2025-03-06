@@ -20,3 +20,6 @@ This is a repository where I have built a containerized GitHub-like VCS service 
 >5. run Gitea in a container
 >6. Manage both the Container through Docker-Compose
 >7. Make use of these 2 images for Kubernetes deployment or Cloud deployment learning.
+
+----
+<img width="817" alt="image" src="https://github.com/user-attachments/assets/413f093c-1976-4870-909c-7abc2d7fb2e6" />
