@@ -23,3 +23,21 @@ This is a repository where I have built a containerized GitHub-like VCS service 
 
 ----
 <img width="817" alt="image" src="https://github.com/user-attachments/assets/413f093c-1976-4870-909c-7abc2d7fb2e6" />
+
+# Gitea Self-Hosting Project Progress
+
+| Sl No | Task                                                       | Status |
+|------:|------------------------------------------------------------|:------:|
+| 1     | Create PostgreSQL Docker image from scratch               | ✅     |
+| 2     | Create Gitea Docker image from scratch                    | ✅     |
+| 3     | Install Gitea with PostgreSQL from those images using Docker commands | ✅     |
+| 4     | Push images to Docker Hub                                  | ✅     |
+| 5     | Implement same Gitea installation with the created image using Docker Compose | ✅     |
+| 6     | Perform a backup and restore of the existing running Gitea | ⏱️     |
+| 7     | Deploy this Gitea instance on a cloud platform             | ⏱️     |
+
+>Legend:
+>
+>✅ = Completed
+>
+>⏱️ = In Progress
