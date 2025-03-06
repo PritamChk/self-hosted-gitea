@@ -1,0 +1,19 @@
+services:
+  postgres:
+    build:
+      dockerfile: postgres.Dockerfile
+      context: .
+      args:
+        PGVERSION: "15.10"
+    image: pritamchk98/postgres:v15.10
+    container_name: pgdb_v1510
+    environment:
+      - "DBPORT=5300"
+      - "MAX_CONN=240"
+    volumes:
+      - "pg_data:/postgres/Database"
+    ports:
+      - "5300:5300"
+
+volumes:
+  pg_data:
